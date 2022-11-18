@@ -23,7 +23,6 @@ class Films extends Component<{}, State> {
   }
 
   changeFilm(id: string, value: string) {
-    console.log(value);
     const copyFilms = [...this.state.films];
     const index = copyFilms.findIndex(item => item.id === id);
     const copyFilmObj = {...this.state.films[index]}
@@ -35,10 +34,13 @@ class Films extends Component<{}, State> {
   render() {
     return (
       <>
+        <h4 className="text-white">Blog about films</h4>
         <InputForm
           onSubmit={(film) => this.addFilmToList(film)}
         />
         <div>
+          {this.state.films.length > 0 ? <h6 className="text-white">To watch list:</h6> : null}
+
           {this.state.films.map(film => (
             <FilmLIstInputs
               key={film.id}

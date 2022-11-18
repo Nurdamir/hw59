@@ -14,7 +14,6 @@ class FilmLIstInputs extends Component<Props> {
     data: ''
   }
 
-
   add(e: FormEvent) {
     e.preventDefault()
     this.props.onSubmit({
@@ -23,7 +22,6 @@ class FilmLIstInputs extends Component<Props> {
     });
     this.setState({data: ''});
   }
-
 
   onChange(e: React.ChangeEvent<HTMLInputElement>) {
     this.setState({data: e.target.value});
@@ -34,11 +32,17 @@ class FilmLIstInputs extends Component<Props> {
       <>
         <form onSubmit={(e) => this.add(e)}>
           <input
+            className="mb-2 rounded w-75"
             type="text"
             value={this.state.data}
             onChange={(e) => this.onChange(e)}
           />
-          <button type={"submit"}>Add</button>
+          <button
+            className="ms-2 rounded"
+            type={"submit"}
+          >
+            Add
+          </button>
         </form>
       </>
     );

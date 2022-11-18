@@ -11,7 +11,6 @@ interface State {
   film: Film;
 }
 
-
 class FilmLIstInputs extends Component<FilmListProps, State> {
 
   state: State = {
@@ -26,11 +25,13 @@ class FilmLIstInputs extends Component<FilmListProps, State> {
     return (
       <>
         <input
+          className="mb-2 rounded"
           type="text"
           value={this.props.film.filmName}
           onChange={this.props.onChangeInput}
         />
         <button
+          className="ms-2 me-3 rounded"
           onClick={this.props.onDelete}
         >X
         </button>
