@@ -1,12 +1,21 @@
 import React from 'react';
-import './App.css';
-import Films from "./containers/Films/Films";
+import Films from "./components/Film/Films/Films";
+import AllJokes from "./components/Jokes/AllJokes/AllJokes";
 
 function App() {
   return (
-    <div className="App">
+    <>
+    <div className="container mt-5 bg-info p-4 rounded-3">
       <Films/>
+      <div className="container-fluid">
+
+
+
+
+      <AllJokes/>
+      </div>
     </div>
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, {Component, FormEvent} from 'react';
-import {Film} from "../types";
+import {Film} from "../../../types";
 
 interface Props {
   onSubmit: (newFilm: Film) => void;
