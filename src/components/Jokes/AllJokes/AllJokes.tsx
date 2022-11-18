@@ -8,7 +8,7 @@ const AllJokes = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const promises: string[] = [];
+      let promises: string[] = [];
 
       for (let i = 0; i < 4; i++) {
         let response = await fetch(url);
@@ -31,8 +31,11 @@ const AllJokes = () => {
 
   return (
     <>
+      <h4 className="text-white">Jokes</h4>
       {jokes.map(joke => (
+        <div className="border-bottom ">
         <OneJoke key={Math.random()} oneJoke={joke}/>
+        </div>
       ))}
     </>
   );
